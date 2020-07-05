@@ -13,7 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Nunito', sans-serif;
-  color: #212226;
+  color: #a39f9f;
+  background: #212226;
 }
 
 h1,
@@ -26,13 +27,15 @@ h6 {
 }
 
 .profile-image {
-  background: url('./images/bg.svg') #0fc598;
+  background: #212226;
   background-size: cover;
   padding: 0 0 3em;
   display: grid;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   text-align: center;
+  border-right: 1px solid #333;
 }
 
 .image-container {
@@ -58,21 +61,24 @@ h6 {
 }
 
 .btn {
-  background: #fff;
+  background: #212226;
   display: block;
   align-self: center;
   margin: 0em auto;
   padding: 0.8rem 4rem;
   text-decoration: none;
-  color: #161313;
+  color: #fff;
+  border: 1px solid #fff;
   font-size: 1rem;
   transition: 0.3s ease;
   border-radius: 3px;
 }
 
 .btn:hover {
-  background: #000;
+  background: #333;
   color: #fff;
+  border-color: #333;
+  transform: translateY(2px);
 }
 
 .sponsor {
@@ -105,8 +111,12 @@ h6 {
   transition: 0.3s linear;
 }
 
+.sponsor a svg path {
+  fill: #797474;
+}
+
 .sponsor a:hover {
-  color: rgba(0, 0, 0, 0.8);
+  color: #797474;
 }
 
 .sponsor a:hover svg {
@@ -125,7 +135,7 @@ h6 {
   display: grid;
   gap: 1rem;
   list-style: none;
-  border-bottom: 4px solid #0fc598;
+  border-bottom: 4px solid #333;
   width: 90%;
   padding-bottom: 1.5rem;
 }
@@ -136,10 +146,11 @@ h6 {
 
 .skill-item a {
   text-decoration: none;
-  background: #324e61;
-  color: #fff;
+  background: #1e2020;
+  color: #a7a2a2;
   padding: 0.5rem 0.4rem;
   font-size: 1rem;
+  border: 1px solid #333;
   border-radius: 0.2rem;
   transition: 0.3s ease-in-out;
   display: block;
@@ -190,20 +201,20 @@ h6 {
 }
 
 .icon:nth-child(1) {
-  border: 1px solid #3b5998;
+  border: 1px solid #333;
 }
 
 .icon:nth-child(2) {
   border: 1px solid #333;
 }
 .icon:nth-child(3) {
-  border: 1px solid red;
+  border: 1px solid #333;
 }
 .icon:nth-child(4) {
-  border: 1px solid #0e76a8;
+  border: 1px solid #333;
 }
 .icon:nth-child(5) {
-  border: 1px solid #00acee;
+  border: 1px solid #333;
 }
 
 .icon svg {
@@ -323,53 +334,4 @@ h6 {
   .profile-details p {
     margin-top: 0;
   }
-}
-
-/* *** Dark Mode Styling *** */
-body.dark,
-body.dark .profile-image {
-  background: #212226;
-  color: #a39f9f;
-}
-
-body.dark .profile-image {
-  border-right: 1px solid #333;
-}
-
-body.dark .btn {
-  background: #212226;
-  color: #fff;
-  border: 1px solid #fff;
-}
-
-body.dark .btn:hover {
-  background: #333;
-  border-color: #333;
-  transform: translateY(2px);
-}
-
-body.dark .sponsor a svg path {
-  fill: #797474;
-}
-
-body.dark .sponsor a:hover {
-  color: #797474;
-}
-
-body.dark .skills {
-  border-bottom: 4px solid #333;
-}
-
-body.dark .skill-item a {
-  background: #1e2020;
-  color: #a7a2a2;
-  border: 1px solid #333;
-}
-
-body.dark .icon {
-  border-color: #333;
-}
-
-body.dark .icon.github svg path {
-  fill: #fff;
 }
