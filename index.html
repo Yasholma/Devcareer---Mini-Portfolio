@@ -22,6 +22,8 @@
     </section>
     <section class="profile-details">
       <div class="sponsor">
+        <div class="theme-switcher">Dark</div>
+
         <a href="https://devcareer.io/account/signup">
           <?xml version="1.0" encoding="iso-8859-1"?>
           <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -343,5 +345,21 @@
         </div>
       </div>
     </section>
+
+    <!-- Script -->
+
+    <script>
+      const themeSwitcher = document.querySelector('.theme-switcher')
+      const body = document.querySelector('body')
+      themeSwitcher.addEventListener('click', function () {
+        if (body.classList.contains('dark')) {
+          body.classList.remove('dark')
+          this.textContent = 'Dark'
+        } else {
+          body.classList.add('dark')
+          this.textContent = 'Light'
+        }
+      })
+    </script>
   </body>
 </html>

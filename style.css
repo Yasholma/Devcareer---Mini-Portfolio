@@ -217,6 +217,21 @@ h6 {
   transform: scale(1.2);
 }
 
+.theme-switcher {
+  position: fixed;
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  top: 0.5rem;
+  transition: all 0.3s;
+}
+
+.theme-switcher:hover {
+  transform: scale(0.9);
+}
+
 @keyframes zoom {
   0% {
     transform: scale(0);
@@ -348,6 +363,10 @@ body.dark .btn:hover {
   transform: translateY(2px);
 }
 
+body.dark .name {
+  color: #a7a2a2;
+}
+
 body.dark .sponsor a svg path {
   fill: #797474;
 }
@@ -372,4 +391,9 @@ body.dark .icon {
 
 body.dark .icon.github svg path {
   fill: #fff;
+}
+
+body.dark .theme-switcher {
+  background: #eee;
+  color: #000;
 }
