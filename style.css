@@ -51,6 +51,10 @@ h6 {
   border-radius: 3px;
 }
 
+.image-container img.dark {
+  display: none;
+}
+
 .profile-image .name {
   font-size: 2rem;
   margin: 1.5rem 0 0rem;

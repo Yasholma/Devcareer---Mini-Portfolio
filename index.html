@@ -15,7 +15,12 @@
   <body>
     <section class="profile-image">
       <div class="image-container">
-        <img src="./images/need.jpg" alt="Cybertech | Yasholma" />
+        <img src="./images/need.jpg" class="light" alt="Cybertech | Yasholma" />
+        <img
+          src="./images/need-dark.png"
+          class="dark"
+          alt="Cybertech | Yasholma"
+        />
       </div>
       <h3 class="name">YOHANNA, Yahaya Hyellamoda</h3>
       <a href="mailto:yasholma1@gmail.com" class="btn">Master Builder</a>
@@ -350,14 +355,19 @@
 
     <script>
       const themeSwitcher = document.querySelector('.theme-switcher')
+
       const body = document.querySelector('body')
       themeSwitcher.addEventListener('click', function () {
         if (body.classList.contains('dark')) {
           body.classList.remove('dark')
           this.textContent = 'Dark'
+          document.querySelector('img.light').style.display = 'block'
+          document.querySelector('img.dark').style.display = 'none'
         } else {
           body.classList.add('dark')
           this.textContent = 'Light'
+          document.querySelector('img.dark').style.display = 'block'
+          document.querySelector('img.light').style.display = 'none'
         }
       })
     </script>
