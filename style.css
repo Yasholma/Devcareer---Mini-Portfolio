@@ -351,6 +351,11 @@ body.dark .profile-image {
   border-right: 1px solid #333;
 }
 
+body.dark .image-container img {
+  border: 5px solid #333;
+  box-shadow: 0 0 0.4rem #333;
+}
+
 body.dark .btn {
   background: #212226;
   color: #fff;
